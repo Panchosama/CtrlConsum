@@ -56,11 +56,11 @@ public class Conector {
     }
 
     public String[] listTipoArticulo(){
-        int largo=5;
+        int largo=6;
         int i=0;
         String[] lista= new String[largo];
         try {
-            String q="Select * from tipo_articulo order by 1 asc";
+            String q="Select * from tipo_articulo order by 2 asc";
             PreparedStatement st= connect.prepareStatement(q);
             ResultSet rs = st.executeQuery();
             while(rs.next()){

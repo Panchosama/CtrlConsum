@@ -44,14 +44,14 @@ public class TipoArticulo {
         c.close();
     }
     //Listado
-    public void list(){
+    public String[] list(){
         Conector c= new Conector();
         int i=0;
         c.connect();
         String[] lista = c.listTipoArticulo();
-        for(i=0;i<lista.length;i++){
-            System.out.println(lista[i]);
-        }
-
+        //for(i=0;i<lista.length;i++){
+        //    System.out.println(lista[i]);
+        //}
+        return lista;
     }
 }

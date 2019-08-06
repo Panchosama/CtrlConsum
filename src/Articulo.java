@@ -5,6 +5,7 @@ public class Articulo {
     private String ubicacion;
     private int cantidad;
     private int tipo;
+
     //Constructores
     public Articulo(String n, String u, int c, int t){
         this.nombre=n;
@@ -45,6 +46,12 @@ public class Articulo {
         this.tipo=t;
     }
 
-
+    public void save(){
+        Conector c=new Conector();
+        c.connect();
+        c.saveArticulo(this);
+        System.out.println("Articulo guardado");
+        c.close();
+    }
 
 }
