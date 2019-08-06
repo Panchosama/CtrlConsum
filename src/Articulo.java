@@ -3,14 +3,12 @@ public class Articulo {
     private int id;
     private String nombre;
     private String ubicacion;
-    private int cantidad;
     private int tipo;
 
     //Constructores
-    public Articulo(String n, String u, int c, int t){
+    public Articulo(String n, String u, int t){
         this.nombre=n;
         this.ubicacion=u;
-        this.cantidad=c;
         this.tipo=t;
     }
     //Métodos
@@ -28,14 +26,6 @@ public class Articulo {
 
     public void setUbicacion(String u){
         this.ubicacion=u;
-    }
-
-    public int getCantidad(){
-        return this.cantidad;
-    }
-
-    public void setCantidad(int c){
-        this.cantidad=c;
     }
 
     public int getTipo(){

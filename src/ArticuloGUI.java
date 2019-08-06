@@ -7,12 +7,10 @@ public class ArticuloGUI {
     private JTextField txtNombre;
     private JTextField txtUbicacion;
     private JComboBox cmbTipo;
-    private JTextField txtCantidad;
     private JButton btnGuardar;
     private JLabel lblNombre;
     private JLabel lblUbicacion;
     private JLabel lblTipo;
-    private JLabel lblCantidad;
     private JPanel pnlArticulo;
 
     public ArticuloGUI() {
@@ -29,10 +27,9 @@ public class ArticuloGUI {
                 try {
                     String n = txtNombre.getText();
                     String u = txtUbicacion.getText();
-                    int c = Integer.parseInt(txtCantidad.getText());
                     int t = cmbTipo.getSelectedIndex();
 
-                    Articulo a = new Articulo(n, u, c, t);
+                    Articulo a = new Articulo(n, u, t);
                     a.save();
                     JOptionPane.showMessageDialog(pnlArticulo, "Almacenado con éxito");
 

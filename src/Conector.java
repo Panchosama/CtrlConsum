@@ -44,11 +44,10 @@ public class Conector {
 
     public void saveArticulo(Articulo articulo){
         try{
-            PreparedStatement st=connect.prepareStatement("insert into articulo (art_nom, art_ubi, art_can, art_tipo) values (?,?,?,?)");
+            PreparedStatement st=connect.prepareStatement("insert into articulo (art_nom, art_ubi, art_can, art_tipo) values (?,?,?)");
             st.setString(1,articulo.getNombre());
             st.setString(2,articulo.getUbicacion());
-            st.setInt(3,articulo.getCantidad());
-            st.setInt(4, articulo.getTipo());
+            st.setInt(3, articulo.getTipo());
             st.execute();
         }catch (SQLException e){
             System.err.println(e.getMessage());
